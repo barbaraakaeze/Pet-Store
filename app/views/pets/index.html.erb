@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th colspan="5"></th>
+    </tr>
+    <% @pets.each do |p| %>
+    <tr>
+        <td><%= link_to p.name, pet_path(p) %></td> <!-- Displays each pet in a table-->
+        <td><%= link_to "Edit Pet", edit_pet_path(p) %></td> <!-- Link to edit pet-->
+        <td><%= link_to "Remove Pet", pet_path(p), method: :delete, data: { confirm: 'Are you sure?'}%></td> <!-- Link to remove pet-->
+    </tr>
+    <% end %>
+</table>
+
+<br>
+
+<!-- Link to add new pet-->
+<%= link_to "New Pet", new_pet_path %>

@@ -1,0 +1,24 @@
+<p>
+    <strong>Name:</strong>
+    <%= @pet.name%>
+    <!--@pet instance var is passed in from show controller's method-->
+</p>
+
+<p>
+    <strong>Age:</strong>
+    <%= @pet.age%>
+</p>
+
+<p>
+    <strong>Desciption:</strong>
+    <%= @pet.description%>
+</p>
+
+<!-- Links us back to the index page-->
+<%= link_to 'Home', pets_path %>
+
+<!-- Links us back to the index page-->
+<%= link_to 'Edit', edit_pet_path %>
+
+<!-- Links us back to the index page-->
+<%= link_to 'Remove', @pet, method: :delete, data: { confirm: 'Are you sure?'} %>
